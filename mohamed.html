@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Vie du Prophète (ﷺ) - Coran Explorer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        .bio-container { max-width: 900px; margin: 40px auto; padding: 40px; background: white; border-radius: var(--radius); box-shadow: 0 10px 40px rgba(0,0,0,0.05); }
+        .timeline { position: relative; border-left: 2px solid var(--win-accent); margin: 20px 0; padding-left: 30px; }
+        .event { margin-bottom: 40px; position: relative; }
+        .event::before { 
+            content: ''; position: absolute; left: -39px; top: 5px; 
+            width: 16px; height: 16px; background: var(--win-accent); 
+            border-radius: 50%; border: 4px solid white; 
+        }
+        .date-tag { font-weight: 700; color: var(--win-accent); font-size: 0.9rem; text-transform: uppercase; }
+        h2 { margin-top: 5px; color: #333; }
+        .info-card { background: #f0f7ff; padding: 20px; border-radius: 12px; margin: 20px 0; border-right: 4px solid var(--win-accent); direction: ltr; }
+        .highlight-text { border-bottom: 2px solid #e3f2fd; padding-bottom: 2px; }
+    </style>
+</head>
+<body class="page-transition">
+
+    <nav class="win11-nav">
+        <div class="nav-content">
+            <a href="index.html" class="logo" style="text-decoration:none">📖 Coran Explorer</a>
+            <div class="nav-right">
+                <a href="introduction.html" class="nav-link">Révélation</a>
+                <a href="index.html" class="nav-link">← Index</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="bio-container">
+        <header style="text-align:center; margin-bottom:50px;">
+            <h1 style="color: var(--win-accent); font-size: 2.5rem;">Muhammad (ﷺ) : Le Messager</h1>
+            <p class="role">Sa vie, sa mission et son héritage</p>
+        </header>
+
+        <div class="timeline">
+            <div class="event">
+                <span class="date-tag">570 - 610 APRÈS J.C.</span>
+                <h2>La Vie avant la Révélation</h2>
+                <p>Né à la <strong>Mecque</strong> dans la tribu des Quraysh, Muhammad devient orphelin très tôt. Élevé par son grand-père puis son oncle Abu Talib, il gagne le surnom de <span class="highlight-text">"Al-Amine"</span> (L'Honnête) pour son intégrité dans le commerce. À 25 ans, il épouse Khadija, une femme noble et commerçante.</p>
+            </div>
+
+            <div class="event">
+                <span class="date-tag">610 APRÈS J.C. (40 ANS)</span>
+                <h2>La Première Révélation</h2>
+                <p>Alors qu'il méditait dans la <strong>grotte de Hira</strong>, l'ange <strong>Jibril</strong> lui apparaît et lui ordonne : <span style="font-family:'Amiri'; font-size:1.2rem; color:var(--win-accent);">"Iqra !"</span> (Lis !). C'est le début de 23 ans de descente du Coran. Il commence à prêcher discrètement, puis publiquement, l'unicité de Dieu (Allah).</p>
+            </div>
+
+            <div class="event">
+                <span class="date-tag">610 - 622 APRÈS J.C.</span>
+                <h2>L'Épreuve de la Mecque</h2>
+                <p>Pendant 13 ans, Muhammad et les premiers musulmans subissent persécutions et boycotts. Malgré cela, il continue de transmettre les versets mecquois, centrés sur la foi, la moralité et la vie après la mort. C'est durant cette période qu'a lieu le <span class="highlight-text">Voyage Nocturne (Al-Isra wal-Mi'raj)</span>.</p>
+            </div>
+
+            <div class="event">
+                <span class="date-tag">622 APRÈS J.C. (L'HÉGIRE)</span>
+                <h2>L'Exode vers Médine</h2>
+                <p>Face aux menaces de mort, il émigre vers <strong>Yathrib</strong> (future Médine). Cet événement marque l'an 1 du calendrier musulman. À Médine, il établit la "Constitution de Médine", créant un État fondé sur la justice et la coexistence entre les tribus musulmanes, juives et païennes.</p>
+            </div>
+
+            <div class="info-card">
+                <strong>Le saviez-vous ?</strong> Les sourates révélées à Médine traitent principalement de la législation, de la famille et de la structure de la société musulmane naissante.
+            </div>
+
+            <div class="event">
+                <span class="date-tag">630 - 632 APRÈS J.C.</span>
+                <h2>La Conquête de la Mecque et la Mort</h2>
+                <p>En 630, il retourne à la Mecque victorieux et sans effusion de sang, pardonnant à ses anciens ennemis. En 632, après avoir accompli le <span class="highlight-text">Pèlerinage d'Adieu</span>, il s'éteint à Médine à l'âge de 63 ans, laissant derrière lui le Coran et sa Sunna (tradition).</p>
+            </div>
+        </div>
+
+        <footer style="text-align:center; padding-top:40px; border-top:1px solid #eee;">
+            <p style="font-style:italic; color:#666;">"Je ne suis qu'un homme à qui il a été révélé que votre Dieu est un Dieu Unique."</p>
+            <a href="index.html" class="dropbtn" style="text-decoration:none; display:inline-block; margin-top:20px;">Retour à l'Index des Sourates</a>
+        </footer>
+    </main>
+
+    <script>
+        // Transition fluide au retour vers l'index
+        document.querySelector('.dropbtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.body.style.opacity = '0';
+            document.body.style.transition = '0.3s';
+            setTimeout(() => window.location.href = this.href, 300);
+        });
+    </script>
+</body>
+</html>

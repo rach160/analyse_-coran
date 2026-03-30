@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Sunna - Coran Explorer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        .sunna-container { max-width: 950px; margin: 40px auto; padding: 40px; background: white; border-radius: var(--radius); box-shadow: 0 10px 40px rgba(0,0,0,0.05); }
+        
+        /* Grille des types de Sunna */
+        .grid-sunna { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 30px 0; }
+        .sunna-card { background: #f8f9fa; padding: 25px; border-radius: 12px; border-top: 4px solid var(--win-accent); transition: 0.3s; }
+        .sunna-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        
+        /* Section Hadiths */
+        .hadith-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px; }
+        .hadith-item { background: #fffdf7; border: 1px solid #f0e6cc; padding: 20px; border-radius: 10px; position: relative; }
+        .hadith-item::before { content: "“"; position: absolute; top: 10px; left: 10px; font-size: 3rem; color: #f0e6cc; font-family: serif; }
+        .hadith-tag { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; color: #b08d2d; display: block; margin-bottom: 10px; }
+        .hadith-source { font-size: 0.8rem; color: #888; margin-top: 10px; display: block; text-align: right; }
+
+        @media (max-width: 768px) { .hadith-gallery { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body class="page-transition">
+
+    <nav class="win11-nav">
+        <div class="nav-content">
+            <a href="index.html" class="logo" style="text-decoration:none">📖 Coran Explorer</a>
+            <div class="nav-right">
+                <a href="mohamed.html" class="nav-link">Le Prophète</a>
+                <a href="index.html" class="nav-link">← Index</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="sunna-container">
+        <header style="text-align:center; margin-bottom:50px;">
+            <h1 style="color: var(--win-accent); font-size: 2.5rem;">La Sunna & Les Hadiths</h1>
+            <p class="role">L'exemple prophétique en paroles et en actes</p>
+        </header>
+
+        <section>
+            <h2>Les piliers de la Sunna</h2>
+            <div class="grid-sunna">
+                <div class="sunna-card">
+                    <span style="color:var(--win-accent); font-weight:bold;">PAROLES (Qawl)</span>
+                    <p>Ce que le Prophète ﷺ a prononcé. C'est la base de la science du Hadith.</p>
+                </div>
+                <div class="sunna-card">
+                    <span style="color:var(--win-accent); font-weight:bold;">ACTES (Fi'l)</span>
+                    <p>Ses actions quotidiennes, sa manière de prier, de manger et d'interagir.</p>
+                </div>
+                <div class="sunna-card">
+                    <span style="color:var(--win-accent); font-weight:bold;">CARACTÈRE (Sifa)</span>
+                    <p>Ses traits de moralité : sa patience, sa générosité et sa douceur.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="win-hr">
+
+        <section>
+            <h2>Paroles Sages (Hadiths choisis)</h2>
+            <p>Voici quelques enseignements fondamentaux qui complètent les préceptes du Coran :</p>
+
+            <div class="hadith-gallery">
+                <div class="hadith-item">
+                    <span class="hadith-tag">Sincérité</span>
+                    <p>"Les actions ne valent que par les intentions qui les animent et chacun ne recevra de récompense que selon son intention."</p>
+                    <span class="hadith-source">— Rapporté par Al-Boukhari</span>
+                </div>
+
+                <div class="hadith-item">
+                    <span class="hadith-tag">Comportement</span>
+                    <p>"Le meilleur d'entre vous est celui qui a le meilleur comportement envers les siens."</p>
+                    <span class="hadith-source">— Rapporté par At-Tirmidhi</span>
+                </div>
+
+                <div class="hadith-item">
+                    <span class="hadith-tag">Fraternité</span>
+                    <p>"Nul d'entre vous ne sera véritablement croyant tant qu'il n'aimera pas pour son frère ce qu'il aime pour lui-même."</p>
+                    <span class="hadith-source">— Rapporté par Muslim</span>
+                </div>
+
+                <div class="hadith-item">
+                    <span class="hadith-tag">Douceur</span>
+                    <p>"Allah est Doux et Il aime la douceur en toute chose."</p>
+                    <span class="hadith-source">— Rapporté par Al-Boukhari</span>
+                </div>
+
+                <div class="hadith-item">
+                    <span class="hadith-tag">Savoir</span>
+                    <p>"La recherche de la science est une obligation pour chaque musulman."</p>
+                    <span class="hadith-source">— Rapporté par Ibn Majah</span>
+                </div>
+
+                <div class="hadith-item">
+                    <span class="hadith-tag">Écologie</span>
+                    <p>"Si l'Heure (la fin du monde) arrive alors que l'un de vous tient un jeune plant dans sa main, s'il peut le planter avant qu'elle n'ait lieu, qu'il le fasse."</p>
+                    <span class="hadith-source">— Rapporté par Ahmed</span>
+                </div>
+            </div>
+        </section>
+
+        <section style="margin-top: 50px; padding: 30px; background: #f0f7ff; border-radius: 12px;">
+            <h3>L'Authentification (Tashih)</h3>
+            <p>Contrairement au Coran qui a été préservé de manière unanime dès le début, les Hadiths ont nécessité un travail de vérification colossal appelé <strong>"La Science des Hommes"</strong> (Ilm al-Rijal). Les savants vérifiaient chaque maillon de la chaîne de transmission (Isnad) pour s'assurer qu'aucun mensonge ne s'était glissé dans les paroles attribuées au Prophète ﷺ.</p>
+        </section>
+
+        <footer style="text-align:center; margin-top:50px;">
+            <a href="index.html" class="dropbtn" style="text-decoration:none; display:inline-block;">Retour à l'Index des Sourates</a>
+        </footer>
+    </main>
+
+    <script>
+        // Transition de page fluide
+        window.onload = () => { document.body.style.opacity = "1"; };
+        document.querySelectorAll('.nav-link, .dropbtn').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                let target = this.href;
+                document.body.style.opacity = "0";
+                setTimeout(() => { window.location.href = target; }, 300);
+            });
+        });
+    </script>
+</body>
+</html>

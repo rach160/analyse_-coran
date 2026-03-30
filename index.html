@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coran Explorer - Rachid Bounoua</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-transition">
+
+    <nav class="win11-nav">
+        <div class="nav-content">
+            <div class="nav-left">
+                <span class="logo">📖 Coran Explorer</span>
+            </div>
+            
+            <div class="nav-right">
+                <a href="introduction.html" class="nav-link">Révélation</a>
+                <a href="mohamed.html" class="nav-link">Le Prophète</a>
+                <a href="souna.html" class="nav-link">La Sunna</a>
+                
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleMenu()">À propos ▾</button>
+                    <div id="aboutMenu" class="dropdown-content">
+                        <div class="profile-card">
+                            <img src="rachid.png" alt="Rachid Bounoua" class="profile-img">
+                            <h3>Rachid Bounoua</h3>
+                            <p class="role">Écrivain & Traducteur</p>
+                            <hr class="win-hr">
+                            <p class="bio">Passionné d'informatique, d'histoire & de la culture générale.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="content-wrapper">
+        <header class="hero">
+            <h1>Analyse Structurelle du Coran</h1>
+            <p>Index interactif bilingue des 114 Sourates</p>
+        </header>
+
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Rechercher par nom (FR/AR), numéro ou thématique...">
+            </div>
+        </div>
+
+        <div class="table-card">
+            <div class="table-responsive">
+                <table id="surahTable">
+                    <thead>
+                        <tr>
+                            <th>N°</th>
+                            <th>Nom (Ar/Fr)</th>
+                            <th>Versets</th>
+                            <th>Lieu</th>
+                            <th>Thème Principal</th>
+                            <th>Points Clés</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer style="text-align: center; margin-top: 60px; padding: 30px; color: #888; font-size: 0.9rem; border-top: 1px solid rgba(0,0,0,0.05);">
+        <p>&copy; 2026 Coran Explorer — Application développée par <strong>Rachid Bounoua</strong></p>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        // Gestion des transitions fluides pour tous les liens internes
+        document.querySelectorAll('.nav-link, .logo').forEach(link => {
+            link.addEventListener('click', function(e) {
+                // Si c'est un lien vers une autre page (pas un bouton JS)
+                if (this.getAttribute('href') && this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    let target = this.href;
+                    document.body.style.opacity = '0';
+                    document.body.style.transform = 'translateY(-10px)';
+                    document.body.style.transition = '0.3s ease-in-out';
+                    
+                    setTimeout(() => {
+                        window.location.href = target;
+                    }, 300);
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
